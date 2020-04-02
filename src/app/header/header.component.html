@@ -1,0 +1,37 @@
+<header >
+<div class="container-fulid">
+<div class="row">
+
+     <div class="block left">
+     <a href="#"><img src=""  width="145" height="126"></a>
+         <ng-container >
+            <a routerLink="{{goBackLink.url}}" class="back" *ngIf="goBackLink.text">
+                <i class="fas fa-chevron-left"></i>{{goBackLink.text}}
+            </a>            
+         </ng-container>
+       
+     </div>
+     <div class="block center"  >
+         <app-menu *ngIf="headerNav"></app-menu>
+     </div>
+     <div class = "block right">
+         <ng-container *ngIf="headerLoginBlock">
+         <button  *ngIf="!loggedInUser"  class="btn btn-outline-primary">Sign In</button>
+         <ul *ngIf="loggedInUser">
+             <li>
+                 welcome <strong class="text-primary">ayush</strong>
+             </li>
+             <li>
+                 <a href="#"><i class="fas fa-unlock"></i> Logout</a>
+             </li>
+         </ul>
+         </ng-container>
+        <div class="contact-details" *ngIf="headerContactDeatails">
+            <a href="ayush.jain@gmailc.com">ayush@gmail.com</a><br>
+            <a href="ayush.jain@gmailc.com">879345612345</a>
+        
+        </div>
+     </div>
+</div>
+</div>
+</header>

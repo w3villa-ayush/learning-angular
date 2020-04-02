@@ -1,0 +1,19 @@
+<div>
+    <h2>view component</h2>
+    <div #box>
+        <h1>User name is {{userName}}</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <button (click)="changeChildProperty()">change child property</button>
+            <button (click)="callChildProperty()">call child property</button>
+        </div>
+          <div class="col-md-6">
+              <app-comp5>
+                  <p #childCon>this is ng content paragraph</p>
+              </app-comp5>
+
+          </div>
+    </div>
+</div>
+

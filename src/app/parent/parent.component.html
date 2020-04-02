@@ -1,0 +1,18 @@
+<div class="page-area">
+  <div class="text-center">
+      <h2>Buy Products</h2>
+  </div>
+  <div class="alert alert-light border d-flex align-items-center" *ngIf = "addedProduct">
+    <strong class="text-success"></strong> {{addedProduct}} is Selected and Added in Cart
+    <button class="btn btn-success ml-auto">Checkout</button>
+  </div>
+  <hr class="mb-3">
+          <h5 class="card-title">Laptop</h5>
+          <button class="btn btn-success" (click)="onSelect('laptop')" >Select is Product</button>
+         
+          <hr class="mb-3">
+          <app-child [placeholderText] = "mytext" [product]="product"
+                      [selectedproduct] ="selectedproduct"
+                 (addedProduct)="onAddedProduct($event)"> </app-child>    
+    
+</div>

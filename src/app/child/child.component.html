@@ -1,0 +1,5 @@
+<div>  
+    <div *ngIf=!product> select any product</div>
+    <div *ngIf=product> {{selectedproduct}} is selected</div>
+    <button class="btn" (click) = "onAddProduct() ">add to card </button>
+</div>
